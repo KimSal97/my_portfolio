@@ -2,7 +2,7 @@ import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import { About } from '../components/About'
 import { ProjectsTabs } from '../components/ProjectsTabs'
-import { Services } from '../components/Services'
+import { Education } from '../components/Education'
 import { Footer } from '../components/Footer'
 import { I18nProvider } from '../i18n/I18nProvider'
 
@@ -13,11 +13,11 @@ export default function Layout() {
         <Navbar />
         <main>
           <Hero />
-          <div className="h-35 bg-gradient-to-b from-gray-950 to-gray-900"></div>
+          <div className="h-32 bg-gradient-to-b from-gray-950 to-gray-900"></div>
           <About />
+          <Education />
+          <div className="h-32 bg-gradient-to-b from-gray-900 to-gray-950"></div>
           <ProjectsTabs />
-          <div className="h-35 bg-gradient-to-b from-gray-900 to-gray-950"></div>
-          <Services />
         </main>
         <Footer />
       </div>

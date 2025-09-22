@@ -24,15 +24,20 @@ export function ParticlesBackground({ type = "meteors" }: ParticlesBackgroundPro
           background: { color: "transparent" },
           fullScreen: { enable: false },
           particles: {
-            number: { value: 40 },
-            move: { direction: "top", enable: true, speed: 1.2 },
+            number: { value: 80 }, 
+            move: {
+              direction: "top",
+              enable: true,
+              speed: { min: 0.5, max: 1.5 },
+            },
             shape: { type: "circle" },
             size: { value: { min: 3, max: 8 } },
-            opacity: { value: 0.6 },
+            opacity: { value: { min: 0.2, max: 0.8 } },
             color: { value: "#38bdf8" },
           },
           detectRetina: true,
         }
+
       case "meteors":
       default:
         return {
@@ -54,11 +59,16 @@ export function ParticlesBackground({ type = "meteors" }: ParticlesBackgroundPro
   if (!ready) return null
 
   return (
-    <Particles
-      key={type}
-      id={`tsparticles-${type}`}
-      options={options}
-      className="pointer-events-none absolute inset-0 z-0"
-    />
+    <div className="pointer-events-none absolute inset-0 z-0">
+      <Particles
+        key={type}
+        id={`tsparticles-${type}`}
+        options={options}
+        className="h-full w-full"
+      />
+      {type === "bubbles" && (
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gray-950 to-transparent pointer-events-none" />
+      )}
+    </div>
   )
 }

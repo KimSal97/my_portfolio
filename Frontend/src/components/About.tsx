@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useI18n } from '../i18n/I18nProvider'
+import { useI18n } from "../i18n/useI18n"
 import { motion, AnimatePresence } from 'framer-motion'
 import Me from '../assets/Me.jpg'
 
@@ -13,11 +13,12 @@ export function About() {
   const [index, setIndex] = useState(0)
 
   const slides: Slide[] = [
-    { text: t('about.p1'), image: Me },
-    { text: t('about.p2'), image: '/images/vfx.jpg' },
     { text: t('about.p3'), image: '/images/code.jpg' },
+    { text: t('about.p2'), image: '/images/vfx.jpg' },
+    { text: t('about.p1'), image: Me },
     { text: t('about.degrees'), image: '/images/study.jpg' },
   ]
+
 
   const next = () => setIndex((i) => (i + 1) % slides.length)
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length)
@@ -75,11 +76,10 @@ export function About() {
               <button
                 key={i}
                 onClick={() => setIndex(i)}
-                className={`h-3 w-3 rounded-full transition ${
-                  i === index
+                className={`h-3 w-3 rounded-full transition ${i === index
                     ? 'bg-indigo-500 scale-125'
                     : 'bg-gray-500 hover:bg-gray-400'
-                }`}
+                  }`}
               />
             ))}
           </div>

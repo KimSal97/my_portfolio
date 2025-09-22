@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { useI18n } from "../i18n/I18nProvider"
+import { useI18n } from "../i18n/useI18n"
 import { motion } from "framer-motion"
-import { useURLScroll } from "../hooks/useURLScroll" // 👈 hooken din
+import { useURLScroll } from "../hooks/UseURLScroll" 
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
@@ -11,7 +11,7 @@ export function Navbar() {
     { href: "hero", label: t("nav.home") },
     { href: "about", label: t("nav.about") },
     { href: "projects", label: t("nav.projects") },
-    { href: "services", label: t("nav.services") },
+    { href: "education", label: t("nav.education") },
     { href: "footer", label: t("nav.contact") },
   ]
 
