@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState, useEffect } from "react"
+import { createContext, useMemo, useState, useEffect } from "react"
 import type { ReactNode } from "react"
 import type { Language, Messages } from "./messages"
 import { en as enMessages, no as noMessages } from "./messages"
