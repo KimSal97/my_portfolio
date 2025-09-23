@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useI18n } from "../i18n/useI18n"
 import { motion, AnimatePresence } from 'framer-motion'
-import Me from '../assets/Me.jpg'
+import Me from '../assets/me.jpg'
+
 
 type Slide = {
   text: string
