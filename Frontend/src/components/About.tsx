@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useI18n } from "../i18n/useI18n"
 import { motion, AnimatePresence } from 'framer-motion'
-import me from '../assets/me.jpg'
+import Me from '../assets/Me.jpg'
 
 type Slide = {
   text: string
@@ -15,7 +15,7 @@ export function About() {
   const slides: Slide[] = [
     { text: t('about.p3'), image: '/images/code.jpg' },
     { text: t('about.p2'), image: '/images/vfx.jpg' },
-    { text: t('about.p1'), image: me },
+    { text: t('about.p1'), image: Me },
     { text: t('about.degrees'), image: '/images/study.jpg' },
   ]
 
