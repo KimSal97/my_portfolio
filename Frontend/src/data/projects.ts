@@ -6,7 +6,7 @@ export type Project = {
   title: string
   description: string
   tags: string[]
-  image?: string
+  image?: string | null
   demoUrl?: string
   repoUrl?: string
 }
