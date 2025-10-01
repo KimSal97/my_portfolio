@@ -6,20 +6,28 @@ export function useURLScroll(ids: string[], offset: number = 100) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
+        let maxEntry: IntersectionObserverEntry | undefined
+
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = entry.target.getAttribute("id")
-            if (id) {
-              setActiveId(id)
-
-              window.history.replaceState(null, "", `#${id}`)
+            if (!maxEntry || entry.intersectionRatio > maxEntry.intersectionRatio) {
+              maxEntry = entry
             }
           }
         })
+
+        if (maxEntry) {
+          const target = maxEntry.target as HTMLElement
+          const id = target.getAttribute("id")
+          if (id && id !== activeId) {
+            setActiveId(id)
+            window.history.replaceState(null, "", `#${id}`)
+          }
+        }
       },
       {
-        rootMargin: `-${offset}px 0px -80% 0px`, 
-        threshold: 0.1,
+        rootMargin: `-${offset}px 0px -40% 0px`,
+        threshold: 0.5,
       }
     )
 
@@ -29,7 +37,7 @@ export function useURLScroll(ids: string[], offset: number = 100) {
     })
 
     return () => observer.disconnect()
-  }, [ids, offset])
+  }, [ids, offset, activeId])
 
   return activeId
 }
