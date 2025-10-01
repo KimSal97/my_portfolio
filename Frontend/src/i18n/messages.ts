@@ -31,7 +31,7 @@ export const en: Messages = {
   'projects.tabs.cs': 'Computer Science',
   'projects.chef.subtitle': 'Highlights from my time as a chef.',
   'projects.vfx.subtitle': 'My VFX showreel and visual work from my studies.',
-  'projects.cs.subtitle': 'Software projects I’ve built; click to see details.',
+  'projects.cs.subtitle': 'Software projects I’ve built.',
 
   'projects.more': 'More info',
   'projects.less': 'Less',

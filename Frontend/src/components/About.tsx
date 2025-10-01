@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useI18n } from "../i18n/useI18n"
 import { motion, AnimatePresence } from 'framer-motion'
 import Me from '../assets/me.jpg'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 
 type Slide = {
@@ -14,12 +15,11 @@ export function About() {
   const [index, setIndex] = useState(0)
 
   const slides: Slide[] = [
-    { text: t('about.p3'), image: '/images/code.jpg' },
-    { text: t('about.p2'), image: '/images/vfx.jpg' },
     { text: t('about.p1'), image: Me },
+    { text: t('about.p2'), image: '/images/vfx.jpg' },
+    { text: t('about.p3'), image: '/images/code.jpg' },
     { text: t('about.degrees'), image: '/images/study.jpg' },
   ]
-
 
   const next = () => setIndex((i) => (i + 1) % slides.length)
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length)
@@ -59,7 +59,7 @@ export function About() {
               onClick={prev}
               className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-gray-700/80 p-3 text-white hover:bg-indigo-500 transition"
             >
-              ←
+              <ChevronLeft size={28} strokeWidth={3} />
             </button>
 
             {/* Right arrow */}
@@ -67,20 +67,23 @@ export function About() {
               onClick={next}
               className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-gray-700/80 p-3 text-white hover:bg-indigo-500 transition"
             >
-              →
+              <ChevronRight size={28} strokeWidth={3} />
             </button>
           </div>
 
           {/* Dots */}
           <div className="mt-6 flex justify-center gap-3">
             {slides.map((_, i) => (
-              <button
+              <motion.button
                 key={i}
                 onClick={() => setIndex(i)}
-                className={`h-3 w-3 rounded-full transition ${i === index
-                    ? 'bg-indigo-500 scale-125'
-                    : 'bg-gray-500 hover:bg-gray-400'
-                  }`}
+                className="h-3 w-3 rounded-full"
+                animate={
+                  i === index
+                    ? { scale: 1.3, backgroundColor: "#6a6ce2ff", boxShadow: "0 0 10px rgba(99,102,241,0.8)" }
+                    : { scale: 1, backgroundColor: "#6b7280", boxShadow: "0 0 0 rgba(0,0,0,0)" }
+                }
+                transition={{ duration: 0.3 }}
               />
             ))}
           </div>
