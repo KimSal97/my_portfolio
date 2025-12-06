@@ -11,8 +11,8 @@ export function Education() {
   const { t } = useI18n()
   const items = [
     {
-      title: "Computer Science",
-      desc: t("projects.cs.subtitle"),
+      title: t("education.cs.title"),
+      desc: t("education.cs.desc"),
       icon: (
         <Cpu
           size={40}
@@ -21,8 +21,8 @@ export function Education() {
       ),
     },
     {
-      title: "VFX",
-      desc: t("projects.vfx.subtitle"),
+      title: t("education.vfx.title"),
+      desc: t("education.vfx.desc"),
       icon: (
         <Clapperboard
           size={40}
@@ -31,8 +31,8 @@ export function Education() {
       ),
     },
     {
-      title: "Cooking",
-      desc: t("projects.chef.subtitle"),
+      title: t("education.cooking.title"),
+      desc: t("education.cooking.desc"),
       icon: (
         <UtensilsCrossed
           size={40}
