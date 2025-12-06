@@ -20,6 +20,8 @@ function TabButton({ active, onClick, children }: { active: boolean; onClick: ()
 export function ProjectsTabs() {
   const { t } = useI18n()
   const [tab, setTab] = useState<'chef' | 'vfx' | 'cs'>('cs')
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
+
 
   return (
     <section id="projects" className="relative bg-gray-950 py-20 text-white">
@@ -30,10 +32,16 @@ export function ProjectsTabs() {
           <p className="mt-2 text-white/70">{t('projects.subtitle')}</p>
         </header>
 
-        <div className="mb-8 flex flex-wrap gap-2">
-          <TabButton active={tab === 'chef'} onClick={() => setTab('chef')}>{t('projects.tabs.chef')}</TabButton>
-          <TabButton active={tab === 'vfx'} onClick={() => setTab('vfx')}>{t('projects.tabs.vfx')}</TabButton>
-          <TabButton active={tab === 'cs'} onClick={() => setTab('cs')}>{t('projects.tabs.cs')}</TabButton>
+        <div className="mb-8 flex flex-wrap gap-2.5">
+          <TabButton active={tab === 'cs'} onClick={() => setTab('cs')}>
+            {t('projects.tabs.cs')}
+          </TabButton>
+          <TabButton active={tab === 'vfx'} onClick={() => setTab('vfx')}>
+            {t('projects.tabs.vfx')}
+          </TabButton>
+          <TabButton active={tab === 'chef'} onClick={() => setTab('chef')}>
+            {t('projects.tabs.chef')}
+          </TabButton>
         </div>
 
         {tab === 'chef' && (
@@ -64,11 +72,21 @@ export function ProjectsTabs() {
         {tab === 'cs' && (
           <div>
             <p className="mb-6 text-white/70">{t('projects.cs.subtitle')}</p>
+
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {projects.map((p) => (
-                <ProjectCard key={p.id} project={p} />
+                <ProjectCard
+                  key={p.id}
+                  project={p}
+                  onShowVideo={(url) => setSelectedVideo(url)}
+                />
               ))}
             </div>
+            {selectedVideo && (
+              <div className="mt-10">
+                <VimeoEmbed videoUrl={selectedVideo} />
+              </div>
+            )}
           </div>
         )}
       </div>
