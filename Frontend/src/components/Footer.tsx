@@ -12,7 +12,7 @@ export function Footer() {
         </p>
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com/DankmemerXDD?tab=repositories"
+            href="https://github.com/KimSal97?tab=repositories"
             target="_blank"
             rel="noreferrer"
             className="transition-transform duration-200 hover:scale-110"
