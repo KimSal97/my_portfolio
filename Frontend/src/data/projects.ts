@@ -13,12 +13,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'my-portfolio',
-    title: 'My Portfolio',
-    description: 'This portfolio built with React, TypeScript, Vite, and Tailwind.',
-    tags: ['React', 'TypeScript', 'Vite', 'Tailwind'],
-    image: '/vite.svg',
-    repoUrl: 'https://github.com/DankmemerXDD/my_portfolio',
+    id: 'storage-management',
+    title: 'Storage Management',
+    description:
+      'En lagerstyringsløsning som lar deg registrere varer, lokasjoner og utlån. Bygget som en webapp for å holde oversikt over inventar og håndtere inn- og ut-sjekking.',
+    tags: ['React', 'TypeScript', 'Tailwind', 'Full-stack', 'Inventory'],
+    image: null,
+    repoUrl: 'https://github.com/KimSal97/Storagemanagement_webapps_H25',
   },
   {
     id: 'shop-react-csharp',
