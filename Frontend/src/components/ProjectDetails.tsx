@@ -2,6 +2,14 @@ import { projects } from "../data/projects"
 import { motion } from "framer-motion"
 import { useI18n } from "../i18n/useI18n"
 
+import dashboard from "../assets/projects/dashboard.png"
+import reorder from "../assets/projects/reorder.png"
+import products from "../assets/projects/products.png"
+import orderHistory from "../assets/projects/orderhistory.png"
+import orderModal from "../assets/projects/ordermodal.png"
+import login from "../assets/projects/Login.png"
+import newOrders from "../assets/projects/new_orders.png"
+
 interface ProjectDetailsProps {
   projectId: string
   onBack: () => void
@@ -45,6 +53,7 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="mx-auto max-w-4xl px-6 py-16">
+        {/* Back */}
         <button
           onClick={onBack}
           className="text-indigo-400 hover:text-indigo-300 text-sm"
@@ -52,6 +61,7 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
           ← {t("project.back")}
         </button>
 
+        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,16 +70,19 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
           {isStorage ? t("project.storage.title") : project.title}
         </motion.h1>
 
+        {/* Lead */}
         <p className="mt-4 text-white/70">
           {isStorage ? t("project.storage.lead") : project.description}
         </p>
 
-        {/* HERO IMAGE SLOT */}
-        <ImageSlot
-          src="/images/storage/hero.png"
-          alt="Storage Management hero"
-          caption="[IMAGE] Dashboard overview (replace with your screenshot)"
-        />
+        {/* HERO IMAGE (Dashboard) */}
+        {isStorage && (
+          <ImageSlot
+            src={dashboard}
+            alt="Storage Management dashboard"
+            caption={t("project.storage.img.dashboard")}
+          />
+        )}
 
         {isStorage ? (
           <>
@@ -78,14 +91,12 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
               <h2 className="text-2xl font-semibold mb-4">
                 {t("project.section.problem")}
               </h2>
-              <p className="text-white/70">
-                {t("project.storage.problem")}
-              </p>
+              <p className="text-white/70">{t("project.storage.problem")}</p>
 
               <ImageSlot
-                src="/images/storage/problem.png"
-                alt="Problem screenshot"
-                caption="[IMAGE] Example: low stock warning / inventory overview"
+                src={reorder}
+                alt="Reorder suggestions"
+                caption={t("project.storage.img.reorder")}
               />
             </section>
 
@@ -94,14 +105,12 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
               <h2 className="text-2xl font-semibold mb-4">
                 {t("project.section.solution")}
               </h2>
-              <p className="text-white/70">
-                {t("project.storage.solution")}
-              </p>
+              <p className="text-white/70">{t("project.storage.solution")}</p>
 
               <ImageSlot
-                src="/images/storage/solution.png"
-                alt="Solution screenshot"
-                caption="[IMAGE] Example: order/cart flow or products page"
+                src={newOrders}
+                alt="New order cart flow"
+                caption={t("project.storage.img.new_orders")}
               />
             </section>
 
@@ -117,12 +126,6 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
                 <li>{t("project.storage.arch.3")}</li>
                 <li>{t("project.storage.arch.4")}</li>
               </ul>
-
-              <ImageSlot
-                src="/images/storage/architecture.png"
-                alt="Architecture diagram"
-                caption="[IMAGE] Diagram: Routes → Controller → Service → Repository"
-              />
             </section>
 
             {/* FEATURES */}
@@ -141,9 +144,21 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
               </ul>
 
               <ImageSlot
-                src="/images/storage/features.png"
-                alt="Features screenshot"
-                caption="[IMAGE] Example: statistics page or order history"
+                src={products}
+                alt="Products overview"
+                caption={t("project.storage.img.products")}
+              />
+
+              <ImageSlot
+                src={orderHistory}
+                alt="Order history"
+                caption={t("project.storage.img.orderhistory")}
+              />
+
+              <ImageSlot
+                src={orderModal}
+                alt="Order details modal"
+                caption={t("project.storage.img.ordermodal")}
               />
             </section>
 
@@ -152,9 +167,7 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
               <h2 className="text-2xl font-semibold mb-4">
                 {t("project.section.role")}
               </h2>
-              <p className="text-white/70">
-                {t("project.storage.role")}
-              </p>
+              <p className="text-white/70">{t("project.storage.role")}</p>
             </section>
 
             {/* CHALLENGES */}
@@ -162,21 +175,23 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
               <h2 className="text-2xl font-semibold mb-4">
                 {t("project.section.challenges")}
               </h2>
-              <p className="text-white/70">
-                {t("project.storage.challenges")}
-              </p>
+              <p className="text-white/70">{t("project.storage.challenges")}</p>
+
+              <ImageSlot
+                src={login}
+                alt="Login screen"
+                caption={t("project.storage.img.Login")}
+              />
             </section>
           </>
         ) : (
           <>
-            {/* Simple fallback for other projects (we can expand later) */}
+            {/* Fallback for other projects */}
             <section className="mt-14">
               <h2 className="text-2xl font-semibold mb-4">
                 {t("projects.description")}
               </h2>
-              <p className="text-white/70">
-                {project.description}
-              </p>
+              <p className="text-white/70">{project.description}</p>
             </section>
           </>
         )}

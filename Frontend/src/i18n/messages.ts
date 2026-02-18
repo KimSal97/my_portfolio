@@ -77,7 +77,7 @@ export const en: Messages = {
   'project.storage.arch.3':
     'Cloudflare D1 (SQLite) database with Drizzle ORM and migrations',
   'project.storage.arch.4':
-    'TypeScript-first development with shared types and validation',
+    'TypeScript with shared types and validation',
 
   'project.storage.features.1':
     'Product CRUD with validation and supplier integration',
@@ -91,6 +91,15 @@ export const en: Messages = {
     'Statistics dashboard visualizing sales and order trends',
   'project.storage.features.6':
     'Local and remote development workflow using D1 and migrations',
+
+  'project.storage.img.Login': 'Authentication flow with login, user registration and password reset.',
+  'project.storage.img.dashboard': 'Dashboard overview with quick access to search and creating a new order.',
+  'project.storage.img.products': 'Product catalog with stock status, supplier mapping and edit/delete actions.',
+  'project.storage.img.new_orders': 'Cart-based order creation: adjust quantities, remove items and submit the order.',
+  'project.storage.img.orderhistory': 'Order history with filtering by status and search across products/orders.',
+  'project.storage.img.ordermodal': 'Order details modal showing items, quantities and unit prices.',
+  'project.storage.img.reorder': 'Reorder suggestions based on minimum stock thresholds and current inventory.',
+
 
   'footer.rights': 'All rights reserved.',
 }
@@ -170,7 +179,7 @@ export const no: Messages = {
   'project.storage.arch.3':
     'Cloudflare D1 (SQLite) med Drizzle ORM og migrasjoner',
   'project.storage.arch.4':
-    'TypeScript-first utvikling med delte typer og validering',
+    'TypeScript med delte typer og validering',
 
   'project.storage.features.1':
     'CRUD-operasjoner for produkter med validering og kobling til leverandører',
@@ -184,6 +193,15 @@ export const no: Messages = {
     'Statistikkdashbord som visualiserer salg og bestillingstrender',
   'project.storage.features.6':
     'Lokal og remote utviklingsflyt med D1 og migrasjoner',
+
+  'project.storage.img.Login': 'Innlogging med registrering av bruker og “glemt passord”-flyt.',
+  'project.storage.img.dashboard': 'Dashboard med søk og snarvei til å opprette ny bestilling.',
+  'project.storage.img.products': 'Produktoversikt med lagerstatus, leverandørkobling og rediger/slett.',
+  'project.storage.img.new_orders': 'Handlekurv-basert bestilling: juster antall, fjern varer og send bestilling.',
+  'project.storage.img.orderhistory': 'Bestillingshistorikk med status-filter og søk på ordre/produkter.',
+  'project.storage.img.ordermodal': 'Ordredetaljer i modal med produkter, antall og enhetspris.',
+  'project.storage.img.reorder': 'Bestillingsforslag basert på minimumslager og nåværende beholdning.',
+
 
   'footer.rights': 'Alle rettigheter forbeholdt.',
 }
