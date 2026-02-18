@@ -37,6 +37,6 @@ export const projects: Project[] = [
     description:
       "A mobile application built in Android Studio with Kotlin. DelingsApp lets users rent or lease their products. Includes chat, camera support, Google Maps and two languages.",
     tags: ["Kotlin", "Android Studio", "Mobile App", "Google Maps", "Multilingual"],
-    repoUrl: "https://github.com/Admojo/DelingsApp",
+    repoUrl: "https://github.com/AmalieSG/DelingsApp",
   },
 ]
