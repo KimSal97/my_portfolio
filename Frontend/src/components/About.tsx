@@ -18,7 +18,6 @@ export function About() {
     { text: t('about.p1'), image: Me },
     { text: t('about.p2'), image: '/images/vfx.jpg' },
     { text: t('about.p3'), image: '/images/code.jpg' },
-    { text: t('about.degrees'), image: '/images/study.jpg' },
   ]
 
   const next = () => setIndex((i) => (i + 1) % slides.length)
@@ -54,7 +53,6 @@ export function About() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Left arrow */}
             <button
               onClick={prev}
               className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-gray-700/80 p-3 text-white hover:bg-indigo-500 transition"
@@ -62,7 +60,6 @@ export function About() {
               <ChevronLeft size={28} strokeWidth={3} />
             </button>
 
-            {/* Right arrow */}
             <button
               onClick={next}
               className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-gray-700/80 p-3 text-white hover:bg-indigo-500 transition"
@@ -71,7 +68,6 @@ export function About() {
             </button>
           </div>
 
-          {/* Dots */}
           <div className="mt-6 flex justify-center gap-3">
             {slides.map((_, i) => (
               <motion.button

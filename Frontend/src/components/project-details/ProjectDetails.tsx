@@ -20,18 +20,21 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-950 text-white">
-        <p>Project not found.</p>
+        <p>{t("projects.notFound")}</p>
       </div>
     )
   }
 
-  const title = caseStudy?.titleKey ? t(caseStudy.titleKey) : project.title
-  const lead = caseStudy?.leadKey ? t(caseStudy.leadKey) : project.description
+  const title = caseStudy?.titleKey ? t(caseStudy.titleKey) : t(project.titleKey)
+  const lead = caseStudy?.leadKey ? t(caseStudy.leadKey) : t(project.descriptionKey)
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="mx-auto max-w-4xl px-6 py-16">
-        <button onClick={onBack} className="text-indigo-400 hover:text-indigo-300 text-sm">
+        <button
+          onClick={onBack}
+          className="text-indigo-400 hover:text-indigo-300 text-sm"
+        >
           ← {t("project.back")}
         </button>
 
@@ -50,7 +53,9 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
             <ImageSlot
               src={caseStudy.hero.src}
               alt={caseStudy.hero.alt}
-              caption={caseStudy.hero.captionKey ? t(caseStudy.hero.captionKey) : undefined}
+              caption={
+                caseStudy.hero.captionKey ? t(caseStudy.hero.captionKey) : undefined
+              }
             />
           </div>
         )}
@@ -96,7 +101,10 @@ export function ProjectDetails({ projectId, onBack }: ProjectDetailsProps) {
 
         <div className="mt-12 flex flex-wrap gap-3">
           {project.tags.map((tag) => (
-            <span key={tag} className="rounded-full bg-white/10 px-3 py-1 text-sm">
+            <span
+              key={tag}
+              className="rounded-full bg-white/10 px-3 py-1 text-sm"
+            >
               {tag}
             </span>
           ))}

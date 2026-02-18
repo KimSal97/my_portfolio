@@ -38,6 +38,9 @@ export const en: Messages = {
   'projects.description': 'Description',
   'projects.source': 'Source Code',
   'projects.openVimeo': 'Open on Vimeo',
+  'projects.view': 'See project',
+  'projects.demo': 'Live Demo',
+
 
   'education.title': 'My Journey in Education',
   'education.subtitle': 'What I have learned along the way.',
@@ -60,6 +63,19 @@ export const en: Messages = {
   'project.section.features': 'Key Features',
   'project.section.role': 'My Role',
   'project.section.challenges': 'Challenges & Learnings',
+
+  'projects.items.storage.title': 'Storage Management',
+  'projects.items.storage.desc':
+    'An inventory management web app for tracking products, locations and loans.',
+
+  'projects.items.servicebus.title': 'Azure Service Bus Manager',
+  'projects.items.servicebus.desc':
+    'Admin tool for Azure Service Bus with search, filtering, CRUD and real-time updates. (THIS PAGE IS WORK IN PROGRESS)',
+
+  'projects.items.delingsapp.title': 'DelingsApp (Leimeg)',
+  'projects.items.delingsapp.desc':
+    'Kotlin/Compose mobile app for renting products with chat, maps, camera and NO/EN language support.',
+
 
   'project.storage.problem':
     'Manual inventory management or spreadsheet-based solutions often result in inaccurate stock levels, poor visibility of product movement and inefficient restocking decisions.',
@@ -99,6 +115,46 @@ export const en: Messages = {
   'project.storage.img.orderhistory': 'Order history with filtering by status and search across products/orders.',
   'project.storage.img.ordermodal': 'Order details modal showing items, quantities and unit prices.',
   'project.storage.img.reorder': 'Reorder suggestions based on minimum stock thresholds and current inventory.',
+
+  "project.delingsapp.title": "DelingsApp (Leimeg)",
+  "project.delingsapp.lead":
+    "A mobile application built in Kotlin and Jetpack Compose that allows users to rent and share products with others. The app includes chat, map integration, camera support, authentication and multilingual functionality.",
+
+  "project.delingsapp.problem":
+    "Many people own products that are rarely used, while others only need them temporarily. There are few simple and user-friendly solutions for private peer-to-peer renting, especially optimized for mobile with built-in communication.",
+
+  "project.delingsapp.solution":
+    "We developed DelingsApp as a mobile solution where users can publish products for rent, reserve items using a date picker, chat directly with owners, and manage reservations and returns. The application integrates Firebase, Google Maps API and modern Android development with Jetpack Compose.",
+
+  "project.delingsapp.role":
+    "I primarily contributed by implementing screens and navigation, building Compose UI components, integrating Firebase authentication and database features, implementing chat, notifications, camera support and multilingual functionality (NO/EN). I also participated in testing and UX improvements.",
+
+  "project.delingsapp.challenges":
+    "The main challenge was learning mobile development from scratch using Jetpack Compose, while integrating advanced features like real-time database, messaging and Google Maps. Structuring navigation and state management correctly was important to keep the project scalable.",
+
+  "project.delingsapp.arch.1": "Built in Kotlin using Jetpack Compose",
+  "project.delingsapp.arch.2": "Firebase Authentication and Firestore database",
+  "project.delingsapp.arch.3": "Google Maps API for location-based products",
+  "project.delingsapp.arch.4": "Modular navigation structure with NavHost",
+
+  "project.delingsapp.features.1": "Create and publish rental products",
+  "project.delingsapp.features.2": "Search and filter products",
+  "project.delingsapp.features.3": "Reservation system with date picker",
+  "project.delingsapp.features.4": "Direct messaging between users",
+  "project.delingsapp.features.5": "Profile management and editing",
+  "project.delingsapp.features.6": "Return checklist and camera support",
+
+  "project.delingsapp.img.hero": "Main app screen with product overview",
+  "project.delingsapp.img.home": "Home screen with search and product feed",
+  "project.delingsapp.img.products": "Product grid from other users",
+  "project.delingsapp.img.reserve": "Product reservation screen",
+  "project.delingsapp.img.datepicker": "Date picker for reservation",
+  "project.delingsapp.img.contacts": "Chat contact list",
+  "project.delingsapp.img.chat": "User-to-user chat screen",
+  "project.delingsapp.img.edit_profile": "Edit user profile screen",
+  "project.delingsapp.img.return_product": "Product return checklist",
+  "project.delingsapp.img.login_email": "Login with email",
+  "project.delingsapp.img.login_phone": "Login with phone number",
 
 
   'footer.rights': 'All rights reserved.',
@@ -140,6 +196,21 @@ export const no: Messages = {
   'projects.description': 'Beskrivelse',
   'projects.source': 'Kildekode',
   'projects.openVimeo': 'Åpne på Vimeo',
+  'projects.view': 'Se prosjekt',
+  'projects.demo': 'Demo',
+
+  'projects.items.storage.title': 'Storage Management',
+  'projects.items.storage.desc':
+    'En lagerstyrings-webapp for å holde oversikt over produkter, lokasjoner og utlån.',
+
+  'projects.items.servicebus.title': 'Azure Service Bus Manager',
+  'projects.items.servicebus.desc':
+    'Admin-verktøy for Azure Service Bus med søk, filtrering, CRUD og sanntidsoppdateringer. (THIS PAGE IS WORK IN PROGRESS)',
+
+  'projects.items.delingsapp.title': 'DelingsApp (Leimeg)',
+  'projects.items.delingsapp.desc':
+    'Mobilapp i Kotlin/Compose for utleie av produkter med chat, kart, kamera og NO/EN språk støtte.',
+
 
   'education.title': 'Min utdanningsreise',
   'education.subtitle': 'Hva jeg har lært på veien.',
@@ -201,6 +272,46 @@ export const no: Messages = {
   'project.storage.img.orderhistory': 'Bestillingshistorikk med status-filter og søk på ordre/produkter.',
   'project.storage.img.ordermodal': 'Ordredetaljer i modal med produkter, antall og enhetspris.',
   'project.storage.img.reorder': 'Bestillingsforslag basert på minimumslager og nåværende beholdning.',
+
+  "project.delingsapp.title": "DelingsApp (Leimeg)",
+  "project.delingsapp.lead":
+    "En mobilapplikasjon utviklet i Kotlin og Jetpack Compose hvor brukere kan leie og dele produkter med hverandre. Appen inkluderer chat, kartintegrasjon, kamera, autentisering og flerspråklig støtte.",
+
+  "project.delingsapp.problem":
+    "Mange eier produkter som brukes sjeldent, samtidig som andre trenger dem i korte perioder. Det finnes få enkle og brukervennlige løsninger for privat utleie mellom personer, spesielt med fokus på mobilbruk og direkte kommunikasjon.",
+
+  "project.delingsapp.solution":
+    "Vi utviklet DelingsApp som en mobil løsning hvor brukere kan legge ut produkter for utleie, reservere produkter med datovalg, chatte direkte med eier, og håndtere reservasjoner og retur. Applikasjonen kombinerer Firebase, Google Maps API og moderne Android-utvikling med Jetpack Compose.",
+
+  "project.delingsapp.role":
+    "Jeg bidro hovedsakelig med utvikling av skjermbilder og routing, implementasjon av Compose-UI, Firebase-integrasjon, autentisering, chat, notifikasjoner, kamera-funksjonalitet og oversettelse (NO/EN). Jeg deltok også i testing og forbedring av brukeropplevelse.",
+
+  "project.delingsapp.challenges":
+    "Den største utfordringen var å lære mobilutvikling fra bunnen av med Jetpack Compose, samt integrere flere avanserte funksjoner som sanntidsdatabase, meldingssystem og Google Maps. Å strukturere navigasjon og state-håndtering på en god måte var også viktig for å holde prosjektet skalerbart.",
+
+  "project.delingsapp.arch.1": "Utviklet i Kotlin med Jetpack Compose",
+  "project.delingsapp.arch.2": "Firebase Authentication og Firestore database",
+  "project.delingsapp.arch.3": "Google Maps API for lokasjonsbaserte produkter",
+  "project.delingsapp.arch.4": "Modulær navigasjonsstruktur med NavHost",
+
+  "project.delingsapp.features.1": "Opprette og publisere produkter for utleie",
+  "project.delingsapp.features.2": "Søke og filtrere produkter",
+  "project.delingsapp.features.3": "Reservasjon med datovelger",
+  "project.delingsapp.features.4": "Direktemeldinger mellom brukere",
+  "project.delingsapp.features.5": "Profilhåndtering og redigering",
+  "project.delingsapp.features.6": "Retur-sjekkliste og kamerafunksjonalitet",
+
+  "project.delingsapp.img.hero": "Appens hovedskjerm med produktoversikt",
+  "project.delingsapp.img.home": "Hovedside med søk og produktfeed",
+  "project.delingsapp.img.products": "Produktgrid fra andre brukere",
+  "project.delingsapp.img.reserve": "Reservasjon av produkt",
+  "project.delingsapp.img.datepicker": "Datovelger for reservasjon",
+  "project.delingsapp.img.contacts": "Kontaktliste for chat",
+  "project.delingsapp.img.chat": "Chat mellom brukere",
+  "project.delingsapp.img.edit_profile": "Redigering av brukerprofil",
+  "project.delingsapp.img.return_product": "Sjekkliste for retur av produkt",
+  "project.delingsapp.img.login_email": "Innlogging med e-post",
+  "project.delingsapp.img.login_phone": "Innlogging med telefonnummer",
 
 
   'footer.rights': 'Alle rettigheter forbeholdt.',

@@ -9,7 +9,15 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onSelectProject }: ProjectCardProps) {
   const { t } = useI18n()
-  const { title, description, tags, image, demoUrl, repoUrl, id } = project
+
+  const {
+    titleKey,
+    descriptionKey,
+    tags,
+    image,
+    repoUrl,
+    id,
+  } = project
 
   return (
     <motion.article
@@ -19,22 +27,25 @@ export function ProjectCard({ project, onSelectProject }: ProjectCardProps) {
       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg backdrop-blur-sm"
     >
       {image && (
-        <div className="mb-3 aspect-video overflow-hidden rounded-xl bg-black/20">
+        <div className="mb-3 aspect-[16/9] overflow-hidden rounded-xl relative">
           <img
             src={image}
-            alt={title}
-            className="h-full w-full object-contain p-4 transition duration-300 group-hover:scale-105"
+            alt={t(titleKey)}
+            className="h-full w-full object-cover scale-125 transition duration-500 group-hover:scale-125"
             loading="lazy"
           />
+
+
+          <div className="absolute inset-0 bg-black/20" />
         </div>
       )}
 
       <h3 className="text-lg font-semibold text-white">
-        {title}
+        {t(titleKey)}
       </h3>
 
       <p className="mt-2 text-sm text-white/80">
-        {description}
+        {t(descriptionKey)}
       </p>
 
       <ul className="mt-3 flex flex-wrap gap-2">
@@ -48,27 +59,13 @@ export function ProjectCard({ project, onSelectProject }: ProjectCardProps) {
         ))}
       </ul>
 
-      {/* ACTION BUTTONS */}
       <div className="mt-4 flex flex-wrap items-center gap-3">
-
-        {/* CASE STUDY BUTTON */}
         <button
           onClick={() => onSelectProject?.(id)}
           className="rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-500"
         >
-          {t("projects.view")} {/* legg til i i18n */}
+          {t("projects.view")}
         </button>
-
-        {demoUrl && (
-          <a
-            href={demoUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg bg-indigo-500/20 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-500/30"
-          >
-            {t("projects.demo")}
-          </a>
-        )}
 
         {repoUrl && (
           <a

@@ -1,9 +1,12 @@
-import reactLogo from "../assets/react.svg"
+import storageManagementMain from "../assets/projects/storageManagement/storageManagementMain.png"
+import delingsAppMain from "../assets/projects/delingsapp/delingsAppMain.png"
+import serviceBusManagerMain from "../assets/serviceBusManagerMain.png"
+
 
 export type Project = {
   id: string
-  title: string
-  description: string
+  titleKey: string
+  descriptionKey: string
   tags: string[]
   image?: string | null
   demoUrl?: string
@@ -13,30 +16,30 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "storage-management",
-    title: "Storage Management",
-    description:
-      "En lagerstyringsløsning som lar deg registrere varer, lokasjoner og utlån. Bygget som en webapp for å holde oversikt over inventar og håndtere inn- og ut-sjekking.",
+    titleKey: "projects.items.storage.title",
+    descriptionKey: "projects.items.storage.desc",
     tags: ["React", "TypeScript", "Tailwind", "Cloudflare", "D1", "Docker"],
+    image: storageManagementMain,
     repoUrl: "https://github.com/KimSal97/Storagemanagement_webapps_H25",
   },
 
   {
-    id: "shop-react-csharp",
-    title: "Shop (React + C#)",
-    description:
-      "Full-stack exploration combining React frontend with a C# backend.",
-    tags: ["React", "C#", "Full-stack"],
-    image: reactLogo,
-    repoUrl: "https://github.com/DankmemerXDD/shop_React_cSharp",
-   
+    id: "delingsapp",
+    titleKey: "projects.items.delingsapp.title",
+    descriptionKey: "projects.items.delingsapp.desc",
+    tags: ["Kotlin", "Android Studio", "Gradle", "Google Maps", "Firebase"],
+    image: delingsAppMain,
+    repoUrl: "https://github.com/AmalieSG/DelingsApp",
   },
 
   {
-    id: "delingsapp",
-    title: "DelingsApp",
-    description:
-      "A mobile application built in Android Studio with Kotlin. DelingsApp lets users rent or lease their products. Includes chat, camera support, Google Maps and two languages.",
-    tags: ["Kotlin", "Android Studio", "Mobile App", "Google Maps", "Multilingual"],
-    repoUrl: "https://github.com/AmalieSG/DelingsApp",
+    id: "azure-servicebus-manager",
+    titleKey: "projects.items.servicebus.title",
+    descriptionKey: "projects.items.servicebus.desc",
+    tags: ["React", "TypeScript", "ASP.NET Core", "Redis", "Azure Service Bus"],
+    image: serviceBusManagerMain,
+    repoUrl: "https://github.com/KimSal97/bachelor_test_ground",
   },
+
+  
 ]
