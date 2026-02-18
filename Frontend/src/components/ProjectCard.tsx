@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 
 interface ProjectCardProps {
   project: Project
-  onShowVideo?: (url: string) => void
+  onSelectProject?: (id: string) => void
 }
 
-export function ProjectCard({ project, onShowVideo }: ProjectCardProps) {
+export function ProjectCard({ project, onSelectProject }: ProjectCardProps) {
   const { t } = useI18n()
-  const { title, description, tags, image, demoUrl, repoUrl, videoUrl } = project
+  const { title, description, tags, image, demoUrl, repoUrl, id } = project
 
   return (
     <motion.article
@@ -29,34 +29,42 @@ export function ProjectCard({ project, onShowVideo }: ProjectCardProps) {
         </div>
       )}
 
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
-      <p className="mt-2 text-sm text-white/80">{description}</p>
+      <h3 className="text-lg font-semibold text-white">
+        {title}
+      </h3>
+
+      <p className="mt-2 text-sm text-white/80">
+        {description}
+      </p>
 
       <ul className="mt-3 flex flex-wrap gap-2">
         {tags.map((tag) => (
-          <li key={tag} className="rounded-full bg-white/10 px-2 py-1 text-xs text-white/80">
+          <li
+            key={tag}
+            className="rounded-full bg-white/10 px-2 py-1 text-xs text-white/80"
+          >
             {tag}
           </li>
         ))}
       </ul>
 
-      <div className="mt-4 flex items-center gap-3">
+      {/* ACTION BUTTONS */}
+      <div className="mt-4 flex flex-wrap items-center gap-3">
 
-        {videoUrl && (
-          <button
-            onClick={() => onShowVideo?.(videoUrl!)}
-            className="rounded-lg bg-indigo-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-400"
-          >
-            {t("projects.demo")}
-          </button>
-        )}
+        {/* CASE STUDY BUTTON */}
+        <button
+          onClick={() => onSelectProject?.(id)}
+          className="rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-500"
+        >
+          {t("projects.view")} {/* legg til i i18n */}
+        </button>
 
-        {!videoUrl && demoUrl && (
+        {demoUrl && (
           <a
             href={demoUrl}
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg bg-indigo-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-400"
+            className="rounded-lg bg-indigo-500/20 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-500/30"
           >
             {t("projects.demo")}
           </a>
@@ -67,7 +75,7 @@ export function ProjectCard({ project, onShowVideo }: ProjectCardProps) {
             href={repoUrl}
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg border border-white/20 bg-white/0 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/10"
+            className="rounded-lg border border-white/20 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/10"
           >
             {t("projects.source")}
           </a>

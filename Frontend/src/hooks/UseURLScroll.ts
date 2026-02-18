@@ -4,6 +4,8 @@ export function useURLScroll(ids: string[], offset: number = 100) {
   const [activeId, setActiveId] = useState<string>("")
 
   useEffect(() => {
+    if (window.location.hash.startsWith("#project/")) return
+
     const observer = new IntersectionObserver(
       (entries) => {
         let maxEntry: IntersectionObserverEntry | undefined

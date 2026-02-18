@@ -55,12 +55,6 @@ export function Hero() {
             >
               {t('hero.ctaProjects')}
             </a>
-            <a
-              href="#services"
-              className="rounded-lg border border-white/20 bg-transparent px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
-            >
-              {t('nav.services')}
-            </a>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}

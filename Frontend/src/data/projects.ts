@@ -8,7 +8,6 @@ export type Project = {
   image?: string | null
   demoUrl?: string
   repoUrl?: string
-  videoUrl?: string
 }
 
 export const projects: Project[] = [
@@ -18,7 +17,6 @@ export const projects: Project[] = [
     description:
       "En lagerstyringsløsning som lar deg registrere varer, lokasjoner og utlån. Bygget som en webapp for å holde oversikt over inventar og håndtere inn- og ut-sjekking.",
     tags: ["React", "TypeScript", "Tailwind", "Full-stack", "Inventory"],
-    videoUrl: "https://vimeo.com/709398946",
     repoUrl: "https://github.com/KimSal97/Storagemanagement_webapps_H25",
   },
 
@@ -29,7 +27,6 @@ export const projects: Project[] = [
       "Full-stack exploration combining React frontend with a C# backend.",
     tags: ["React", "C#", "Full-stack"],
     image: reactLogo,
-    videoUrl: "https://vimeo.com/123456789",
     repoUrl: "https://github.com/DankmemerXDD/shop_React_cSharp",
    
   },
@@ -40,7 +37,6 @@ export const projects: Project[] = [
     description:
       "A mobile application built in Android Studio with Kotlin. DelingsApp lets users rent or lease their products. Includes chat, camera support, Google Maps and two languages.",
     tags: ["Kotlin", "Android Studio", "Mobile App", "Google Maps", "Multilingual"],
-    videoUrl: "https://vimeo.com/123456789",
     repoUrl: "https://github.com/Admojo/DelingsApp",
   },
 ]

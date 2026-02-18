@@ -3,33 +3,49 @@ import { useI18n } from "../i18n/useI18n"
 import { chefItems } from '../data/chef'
 import { projects } from '../data/projects'
 import { ProjectCard } from './ProjectCard'
-import { VimeoEmbed } from './VimeoEmbed'
 import { ParticlesBackground } from './ParticlesBackground'
+import { VimeoEmbed } from './VimeoEmbed'
 
-function TabButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
+interface ProjectsTabsProps {
+  onSelectProject: (id: string) => void
+}
+
+function TabButton({
+  active,
+  onClick,
+  children
+}: {
+  active: boolean
+  onClick: () => void
+  children: React.ReactNode
+}) {
   return (
     <button
       onClick={onClick}
-      className={`rounded-md px-3 py-1.5 text-sm ${active ? 'bg-indigo-500 text-white' : 'bg-white/5 text-white/80 hover:bg-white/10'}`}
+      className={`rounded-md px-3 py-1.5 text-sm ${
+        active ? 'bg-indigo-500 text-white' : 'bg-white/5 text-white/80 hover:bg-white/10'
+      }`}
     >
       {children}
     </button>
   )
 }
 
-export function ProjectsTabs() {
+export function ProjectsTabs({ onSelectProject }: ProjectsTabsProps) {
   const { t } = useI18n()
   const [tab, setTab] = useState<'chef' | 'vfx' | 'cs'>('cs')
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
-
 
   return (
     <section id="projects" className="relative bg-gray-950 py-20 text-white">
       <ParticlesBackground type="bubbles" />
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <header className="mb-6">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('projects.title')}</h2>
-          <p className="mt-2 text-white/70">{t('projects.subtitle')}</p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            {t('projects.title')}
+          </h2>
+          <p className="mt-2 text-white/70">
+            {t('projects.subtitle')}
+          </p>
         </header>
 
         <div className="mb-8 flex flex-wrap gap-2.5">
@@ -49,9 +65,17 @@ export function ProjectsTabs() {
             <p className="mb-6 text-white/70">{t('projects.chef.subtitle')}</p>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {chefItems.map((item) => (
-                <article key={item.id} className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-lg">
+                <article
+                  key={item.id}
+                  className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-lg"
+                >
                   <div className="aspect-video overflow-hidden bg-black/20">
-                    <img src={item.imageUrl} alt={item.title} className="h-full w-full object-cover" loading="lazy" />
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="p-4">
                     <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -69,6 +93,7 @@ export function ProjectsTabs() {
             <VimeoEmbed videoUrl="https://vimeo.com/709398946" />
           </div>
         )}
+
         {tab === 'cs' && (
           <div>
             <p className="mb-6 text-white/70">{t('projects.cs.subtitle')}</p>
@@ -78,15 +103,10 @@ export function ProjectsTabs() {
                 <ProjectCard
                   key={p.id}
                   project={p}
-                  onShowVideo={(url) => setSelectedVideo(url)}
+                  onSelectProject={onSelectProject}
                 />
               ))}
             </div>
-            {selectedVideo && (
-              <div className="mt-10">
-                <VimeoEmbed videoUrl={selectedVideo} />
-              </div>
-            )}
           </div>
         )}
       </div>

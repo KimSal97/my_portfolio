@@ -25,17 +25,17 @@ export const en: Messages = {
   'about.showreel': 'Watch my VFX showreel',
 
   'projects.title': 'Projects',
-  'projects.subtitle': 'A selection of things I’ve built recently.',
-  'projects.tabs.chef': 'Chef',
+  'projects.subtitle': 'A selection of things I’ve made.',
+  'projects.tabs.chef': 'Cooking',
   'projects.tabs.vfx': 'VFX',
   'projects.tabs.cs': 'Computer Science',
   'projects.chef.subtitle': 'Highlights from my time as a chef.',
   'projects.vfx.subtitle': 'My VFX showreel and visual work from my studies.',
-  'projects.cs.subtitle': 'Software projects I’ve built.',
+  'projects.cs.subtitle': 'Software projects I’ve made.',
 
   'projects.more': 'More info',
   'projects.less': 'Less',
-  'projects.demo': 'Live Demo',
+  'projects.description': 'Description',
   'projects.source': 'Source Code',
   'projects.openVimeo': 'Open on Vimeo',
 
@@ -47,6 +47,50 @@ export const en: Messages = {
   'education.vfx.desc': 'Exploring visual effects gave me an eye for design, detail, and storytelling.',
   'education.cooking.title': 'Cooking',
   'education.cooking.desc': 'Working as a chef taught me discipline, creativity, and handling pressure.',
+
+  'project.back': 'Back to projects',
+
+  'project.storage.title': 'Storage Management',
+  'project.storage.lead':
+    'A full-stack inventory management system for tracking products, suppliers, orders and sales in real time.',
+
+  'project.section.problem': 'The Problem',
+  'project.section.solution': 'The Solution',
+  'project.section.architecture': 'Architecture',
+  'project.section.features': 'Key Features',
+  'project.section.role': 'My Role',
+  'project.section.challenges': 'Challenges & Learnings',
+
+  'project.storage.problem':
+    'Manual inventory management or spreadsheet-based solutions often result in inaccurate stock levels, poor visibility of product movement and inefficient restocking decisions.',
+  'project.storage.solution':
+    'I developed a full-stack web application that centralizes inventory operations. The system manages products, suppliers, orders and sales, while providing dashboards and statistics for better decision-making.',
+  'project.storage.role':
+    'I worked across the full stack, contributing to frontend implementation, backend API routes, database schema design and integration using a structured architecture.',
+  'project.storage.challenges':
+    'One of the main challenges was maintaining consistent business logic across products, orders and sales while ensuring type safety and a scalable backend structure.',
+
+  'project.storage.arch.1':
+    'Cloudflare Workers backend with REST API routes',
+  'project.storage.arch.2':
+    'Layered architecture: Routes → Controller → Service → Repository',
+  'project.storage.arch.3':
+    'Cloudflare D1 (SQLite) database with Drizzle ORM and migrations',
+  'project.storage.arch.4':
+    'TypeScript-first development with shared types and validation',
+
+  'project.storage.features.1':
+    'Product CRUD with validation and supplier integration',
+  'project.storage.features.2':
+    'Order creation through a cart-based workflow (multiple products per order)',
+  'project.storage.features.3':
+    'Order history with status filtering (pending, completed, cancelled)',
+  'project.storage.features.4':
+    'Sales registration affecting inventory levels in real time',
+  'project.storage.features.5':
+    'Statistics dashboard visualizing sales and order trends',
+  'project.storage.features.6':
+    'Local and remote development workflow using D1 and migrations',
 
   'footer.rights': 'All rights reserved.',
 }
@@ -74,17 +118,17 @@ export const no: Messages = {
   'about.showreel': 'Se VFX-showreelen min',
 
   'projects.title': 'Prosjekter',
-  'projects.subtitle': 'Et utvalg av ting jeg har bygget nylig.',
-  'projects.tabs.chef': 'Kokk',
+  'projects.subtitle': 'Et utvalg av ting jeg har laget.',
+  'projects.tabs.chef': 'Matlaging',
   'projects.tabs.vfx': 'VFX',
   'projects.tabs.cs': 'Informatikk',
   'projects.chef.subtitle': 'Høydepunkter fra tiden min som kokk.',
   'projects.vfx.subtitle': 'Min VFX-showreel og visuelt arbeid fra studiene mine.',
-  'projects.cs.subtitle': 'Programvareprosjekter jeg har bygget.',
+  'projects.cs.subtitle': 'Programvareprosjekter jeg har laget.',
 
   'projects.more': 'Mer info',
   'projects.less': 'Mindre',
-  'projects.demo': 'Live-demo',
+  'projects.description': 'Beskrivelse',
   'projects.source': 'Kildekode',
   'projects.openVimeo': 'Åpne på Vimeo',
 
@@ -96,6 +140,50 @@ export const no: Messages = {
   'education.vfx.desc': 'Utforskning av visuelle effekter ga meg øye for design, detaljer og historiefortelling.',
   'education.cooking.title': 'Kokk',
   'education.cooking.desc': 'Å jobbe som kokk lærte meg disiplin, kreativitet og å håndtere press.',
+
+  'project.back': 'Tilbake til prosjekter',
+
+  'project.storage.title': 'Storage Management',
+  'project.storage.lead':
+    'Et full-stack lagerstyringssystem for håndtering av produkter, leverandører, bestillinger og salg i sanntid.',
+
+  'project.section.problem': 'Problemet',
+  'project.section.solution': 'Løsningen',
+  'project.section.architecture': 'Arkitektur',
+  'project.section.features': 'Hovedfunksjoner',
+  'project.section.role': 'Min rolle',
+  'project.section.challenges': 'Utfordringer og læring',
+
+  'project.storage.problem':
+    'Manuell lagerstyring eller bruk av regneark fører ofte til feil lagerstatus, dårlig oversikt over vareflyt og ineffektive gjenbestillinger.',
+  'project.storage.solution':
+    'Jeg utviklet en full-stack webapplikasjon som samler lageroperasjoner på ett sted. Systemet håndterer produkter, leverandører, bestillinger og salg, samtidig som det gir oversikt gjennom dashbord og statistikk.',
+  'project.storage.role':
+    'Jeg jobbet på hele stacken og bidro med frontend, backend API-ruter, databaseskjema og integrasjon gjennom en strukturert arkitektur.',
+  'project.storage.challenges':
+    'En sentral utfordring var å opprettholde konsistent forretningslogikk mellom produkter, bestillinger og salg, samtidig som systemet forble typesikkert og skalerbart.',
+
+  'project.storage.arch.1':
+    'Cloudflare Workers-backend med REST API-ruter',
+  'project.storage.arch.2':
+    'Lagvis arkitektur: Routes → Controller → Service → Repository',
+  'project.storage.arch.3':
+    'Cloudflare D1 (SQLite) med Drizzle ORM og migrasjoner',
+  'project.storage.arch.4':
+    'TypeScript-first utvikling med delte typer og validering',
+
+  'project.storage.features.1':
+    'CRUD-operasjoner for produkter med validering og kobling til leverandører',
+  'project.storage.features.2':
+    'Bestilling via handlekurv (flere produkter per bestilling)',
+  'project.storage.features.3':
+    'Bestillingshistorikk med filtrering etter status',
+  'project.storage.features.4':
+    'Registrering av salg som oppdaterer lagerbeholdning i sanntid',
+  'project.storage.features.5':
+    'Statistikkdashbord som visualiserer salg og bestillingstrender',
+  'project.storage.features.6':
+    'Lokal og remote utviklingsflyt med D1 og migrasjoner',
 
   'footer.rights': 'Alle rettigheter forbeholdt.',
 }
