@@ -16,7 +16,7 @@ export const projects: Project[] = [
     title: "Storage Management",
     description:
       "En lagerstyringsløsning som lar deg registrere varer, lokasjoner og utlån. Bygget som en webapp for å holde oversikt over inventar og håndtere inn- og ut-sjekking.",
-    tags: ["React", "TypeScript", "Tailwind", "Full-stack", "Inventory"],
+    tags: ["React", "TypeScript", "Tailwind", "Cloudflare", "D1", "Docker"],
     repoUrl: "https://github.com/KimSal97/Storagemanagement_webapps_H25",
   },
 
