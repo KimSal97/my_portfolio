@@ -6,7 +6,7 @@ import { ProjectsTabs } from '../components/ProjectsTabs'
 import { Education } from '../components/Education'
 import { Footer } from '../components/Footer'
 import { I18nProvider } from '../i18n/I18nProvider'
-import { ProjectDetails } from '../components/ProjectDetails'
+import { ProjectDetails } from '../components/project-details/ProjectDetails'
 
 export default function Layout() {
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null)

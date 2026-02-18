@@ -1,12 +1,12 @@
 import type { CaseStudy } from "../types"
 
-import dashboard from "../../assets/projects/dashboard.png"
-import reorder from "../../assets/projects/reorder.png"
-import products from "../../assets/projects/products.png"
-import orderHistory from "../../assets/projects/orderhistory.png"
-import orderModal from "../../assets/projects/ordermodal.png"
-import login from "../../assets/projects/Login.png"
-import newOrders from "../../assets/projects/new_orders.png"
+import dashboard from "../../../assets/projects/storageManagement/dashboard.png"
+import reorder from "../../../assets/projects/storageManagement/reorder.png"
+import products from "../../../assets/projects/storageManagement/products.png"
+import orderHistory from "../../../assets/projects/storageManagement/orderhistory.png"
+import orderModal from "../../../assets/projects/storageManagement/ordermodal.png"
+import login from "../../../assets/projects/storageManagement/Login.png"
+import newOrders from "../../../assets/projects/storageManagement/new_orders.png"
 
 export const storageManagementCase: CaseStudy = {
   titleKey: "project.storage.title",
