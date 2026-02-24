@@ -11,6 +11,8 @@ export type Project = {
   image?: string | null
   demoUrl?: string
   repoUrl?: string
+  imageScale?: number
+  imagePosition?: string
 }
 
 export const projects: Project[] = [
@@ -21,6 +23,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Tailwind", "Cloudflare", "D1", "Docker"],
     image: storageManagementMain,
     repoUrl: "https://github.com/KimSal97/Storagemanagement_webapps_H25",
+    imagePosition: "50% 40%",
   },
 
   {
@@ -30,6 +33,8 @@ export const projects: Project[] = [
     tags: ["Kotlin", "Android Studio", "Gradle", "Google Maps", "Firebase"],
     image: delingsAppMain,
     repoUrl: "https://github.com/AmalieSG/DelingsApp",
+    imageScale: 1.3,
+    imagePosition: "50% 30%",
   },
 
   {
@@ -38,7 +43,8 @@ export const projects: Project[] = [
     descriptionKey: "projects.items.servicebus.desc",
     tags: ["React", "TypeScript", "ASP.NET Core", "Redis", "Azure Service Bus"],
     image: serviceBusManagerMain,
-    repoUrl: "https://github.com/KimSal97/bachelor_test_ground",
+    imageScale: 1.2,
+    imagePosition: "50% 30%",
   },
 
   
