@@ -33,8 +33,8 @@ export const projects: Project[] = [
     tags: ["Kotlin", "Android Studio", "Gradle", "Google Maps", "Firebase"],
     image: delingsAppMain,
     repoUrl: "https://github.com/AmalieSG/DelingsApp",
-    imageScale: 1.3,
-    imagePosition: "50% 30%",
+    imageScale: 1.1,
+    imagePosition: "50% 10%",
   },
 
   {
