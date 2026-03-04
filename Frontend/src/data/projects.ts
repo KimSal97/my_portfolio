@@ -1,6 +1,6 @@
 import storageManagementMain from "../assets/projects/storageManagement/storageManagementMain.png"
 import delingsAppMain from "../assets/projects/delingsapp/delingsAppMain.png"
-import serviceBusManagerMain from "../assets/serviceBusManagerMain.png"
+import serviceBusManagerMain from "../assets/projects/azureServiceBus/serviceBusManagerMain.png"
 
 
 export type Project = {
