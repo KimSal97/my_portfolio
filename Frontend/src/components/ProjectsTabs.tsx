@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useI18n } from "../i18n/useI18n"
-import { chefItems } from '../data/chef'
 import { projects } from '../data/projects'
 import { ProjectCard } from './ProjectCard'
 import { ParticlesBackground } from './ParticlesBackground'
 import { VimeoEmbed } from './VimeoEmbed'
+import { ChefGallery } from "../components/chef/ChefGallery";
 
 interface ProjectsTabsProps {
   onSelectProject: (id: string) => void
@@ -22,9 +22,8 @@ function TabButton({
   return (
     <button
       onClick={onClick}
-      className={`rounded-md px-3 py-1.5 text-sm ${
-        active ? 'bg-indigo-500 text-white' : 'bg-white/5 text-white/80 hover:bg-white/10'
-      }`}
+      className={`rounded-md px-3 py-1.5 text-sm ${active ? 'bg-indigo-500 text-white' : 'bg-white/5 text-white/80 hover:bg-white/10'
+        }`}
     >
       {children}
     </button>
@@ -60,30 +59,10 @@ export function ProjectsTabs({ onSelectProject }: ProjectsTabsProps) {
           </TabButton>
         </div>
 
-        {tab === 'chef' && (
+        {tab === "chef" && (
           <div>
-            <p className="mb-6 text-white/70">{t('projects.chef.subtitle')}</p>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {chefItems.map((item) => (
-                <article
-                  key={item.id}
-                  className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-lg"
-                >
-                  <div className="aspect-video overflow-hidden bg-black/20">
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="mt-1 text-sm text-white/80">{item.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+            <p className="mb-6 text-white/70">{t("projects.chef.subtitle")}</p>
+            <ChefGallery />
           </div>
         )}
 

@@ -49,7 +49,7 @@ export const en: Messages = {
   'education.vfx.title': 'VFX',
   'education.vfx.desc': 'Exploring visual effects gave me an eye for design, detail, and storytelling.',
   'education.cooking.title': 'Cooking',
-  'education.cooking.desc': 'Working as a chef taught me discipline, creativity, and handling pressure.',
+  'education.cooking.desc': 'Working as a chef taught me discipline, work ethics, creativity, and handling pressure.',
 
   'project.back': 'Back to projects',
 
@@ -70,7 +70,7 @@ export const en: Messages = {
 
   'projects.items.servicebus.title': 'Azure Service Bus Manager',
   'projects.items.servicebus.desc':
-    'Admin tool for Azure Service Bus with search, filtering, CRUD and real-time updates. (THIS PAGE IS WORK IN PROGRESS)',
+    'Admin tool for Azure Service Bus with search, filtering, CRUD and real-time updates.',
 
   'projects.items.delingsapp.title': 'DelingsApp (Leimeg)',
   'projects.items.delingsapp.desc':
@@ -80,7 +80,7 @@ export const en: Messages = {
   'project.storage.problem':
     'Manual inventory management or spreadsheet-based solutions often result in inaccurate stock levels, poor visibility of product movement and inefficient restocking decisions.',
   'project.storage.solution':
-    'I developed a full-stack web application that centralizes inventory operations. The system manages products, suppliers, orders and sales, while providing dashboards and statistics for better decision-making.',
+    'We developed a full-stack web application that centralizes inventory operations. The system manages products, suppliers, orders and sales, while providing dashboards and statistics for better decision-making.',
   'project.storage.role':
     'I worked across the full stack, contributing to frontend implementation, backend API routes, database schema design and integration using a structured architecture.',
   'project.storage.challenges':
@@ -159,37 +159,39 @@ export const en: Messages = {
   'project.servicebus.title': 'Azure Service Bus Manager',
 
   'project.servicebus.lead':
-    'A web-based administration tool for managing Azure Service Bus resources such as queues, topics and messages. The system provides search, filtering, dead-letter handling, message inspection and operational metrics.',
+    'A web-based administration tool for managing Azure Service Bus resources such as queues, topics and messages. The system provides search, filtering, dead-letter handling, message inspection and metrics.',
   'project.servicebus.problem':
     'Managing Azure Service Bus resources through the Azure portal can be slow and inefficient when debugging messages, inspecting payloads or handling dead-letter queues. Developers often need faster ways to inspect messages, resend them and monitor message flow.',
   'project.servicebus.solution':
-    'I developed a dedicated management interface that connects to Azure Service Bus and allows users to browse queues and topics, inspect messages, resend dead-letter messages and search through message payloads. The application also provides metrics and message analytics to better understand message flow.',
+    'My team and i developed a dedicated management interface that connects to Azure Service Bus and allows users to browse queues and topics, inspect messages, resend dead-letter messages and search through message payloads. The application also provides metrics and message analytics to better understand message flow.',
   'project.servicebus.role':
     'I designed and implemented the full system including frontend UI, backend services and integrations with Azure Service Bus. I also implemented Redis caching for dead-letter messages and built the metrics visualization dashboard.',
   'project.servicebus.challenges':
     'Handling message payload inspection and dead-letter management required careful handling of message metadata and state transitions. Another challenge was building flexible filtering and search capabilities across message payloads while maintaining good performance.',
 
   'project.servicebus.arch.1':
-    'React + TypeScript frontend built with Vite and Tailwind',
+    'Frontend built with React, TypeScript, Vite and Tailwind',
   'project.servicebus.arch.2':
-    'Backend services interacting with Azure Service Bus SDK',
+    'Backend services built with ASP.NET Core (C#) integrating with the Azure Service Bus SDK',
   'project.servicebus.arch.3':
-    'Redis used for caching dead-letter messages and metadata',
+    'Redis used for caching dead-letter messages and connection metadata',
   'project.servicebus.arch.4':
-    'Metrics dashboard visualizing message throughput and errors',
+    'Metrics dashboard visualizing message throughput and system activity',
 
   'project.servicebus.features.1':
-    'Browse and manage Azure Service Bus queues and topics',
+    'Sidebar connection manager where users can add one or multiple Azure Service Bus connection strings and quickly switch between them.',
   'project.servicebus.features.2':
-    'View active messages with payload inspection',
+    'Browse and manage Azure Service Bus queues and topics within the selected namespace.',
   'project.servicebus.features.3':
-    'Dead-letter queue management and message recovery',
+    'View and inspect messages with detailed metadata such as message ID, sequence number and payload.',
   'project.servicebus.features.4':
-    'Search messages by payload, ID or sequence number',
+    'Dead-letter queue management for identifying failed messages and debugging issues.',
   'project.servicebus.features.5':
-    'Resend messages directly from the interface',
+    'Search and filter messages by payload content, ID or sequence number.',
   'project.servicebus.features.6':
-    'Metrics dashboard showing message flow and errors',
+    'Resend messages directly from the interface to quickly retry failed processing.',
+  'project.servicebus.features.7':
+    'Metrics dashboard visualizing message throughput, errors and system activity.',
 
   'project.servicebus.img.topics_list':
     'Overview of topics and subscriptions in Azure Service Bus.',
@@ -210,7 +212,37 @@ export const en: Messages = {
   'project.servicebus.img.redis_deadletter_storage':
     'Dead-letter messages cached in Redis for faster access.',
   'project.servicebus.img.metrics_dashboard':
-    'Metrics dashboard visualizing incoming messages, errors and throughput.',
+    'Metrics dashboard visualizing incoming messages and throughput.',
+  'project.servicebus.img.main_dashboard':
+    'Main dashboard showing Azure Service Bus topics, queues and system overview.',
+  'project.servicebus.img.queue_filter':
+    'Filtering queues by name and status to quickly locate specific message queues.',
+  'project.servicebus.img.azure_namespace_overview':
+    'Azure portal view of the Service Bus namespace containing topics and queues.',
+  'project.servicebus.img.azure_topic_messages':
+    'Messages inside a topic subscription shown in the Azure portal.',
+  'project.servicebus.img.azure_queue_messages':
+    'Queue messages viewed directly in Azure Service Bus.',
+  'project.servicebus.img.message_list':
+    'Application interface listing messages with metadata such as ID and sequence number.',
+  'project.servicebus.img.send_message_dialog':
+    'Dialog for sending new messages to a queue or topic with custom payload.',
+  'project.servicebus.img.dashboard_darkmode':
+    'Alternative dark mode view of the Service Bus dashboard interface.',
+  'project.servicebus.img.topic_messages':
+    'List of messages inside a topic subscription with message metadata and payload preview.',
+  'project.servicebus.img.resend_modal':
+    'Modal dialog used to resend a message with modified properties or payload.',
+  'project.servicebus.img.message_details_queue':
+    'Detailed inspection view of a queue message including payload and metadata.',
+  'project.servicebus.img.message_details_deadletter':
+    'Detailed inspection view of a dead-letter message including failure information.',
+  'project.servicebus.img.redis_deadletter_cache':
+    'Dead-letter message payload cached in Redis to improve retrieval performance.',
+
+  "chef.dish.1": "Salmon service for banquet",
+  "chef.dish.2": "Burger with fries",
+  "chef.dish.3": "Banquet starter plating",
 
 
   'footer.rights': 'All rights reserved.',
@@ -261,7 +293,7 @@ export const no: Messages = {
 
   'projects.items.servicebus.title': 'Azure Service Bus Manager',
   'projects.items.servicebus.desc':
-    'Admin-verktøy for Azure Service Bus med søk, filtrering, CRUD og sanntidsoppdateringer. (THIS PAGE IS WORK IN PROGRESS)',
+    'Admin-verktøy for Azure Service Bus med søk, filtrering, CRUD og sanntidsoppdateringer.',
 
   'projects.items.delingsapp.title': 'DelingsApp (Leimeg)',
   'projects.items.delingsapp.desc':
@@ -275,7 +307,7 @@ export const no: Messages = {
   'education.vfx.title': 'VFX',
   'education.vfx.desc': 'Utforskning av visuelle effekter ga meg øye for design, detaljer og historiefortelling.',
   'education.cooking.title': 'Kokk',
-  'education.cooking.desc': 'Å jobbe som kokk lærte meg disiplin, kreativitet og å håndtere press.',
+  'education.cooking.desc': 'Å jobbe som kokk lærte meg disiplin, arbeidsmoral, kreativitet og å håndtere press.',
 
   'project.back': 'Tilbake til prosjekter',
 
@@ -293,7 +325,7 @@ export const no: Messages = {
   'project.storage.problem':
     'Manuell lagerstyring eller bruk av regneark fører ofte til feil lagerstatus, dårlig oversikt over vareflyt og ineffektive gjenbestillinger.',
   'project.storage.solution':
-    'Jeg utviklet en full-stack webapplikasjon som samler lageroperasjoner på ett sted. Systemet håndterer produkter, leverandører, bestillinger og salg, samtidig som det gir oversikt gjennom dashbord og statistikk.',
+    'Jeg og mitt team utviklet en full-stack webapplikasjon som samler lageroperasjoner på ett sted. Systemet håndterer produkter, leverandører, bestillinger og salg, samtidig som det gir oversikt gjennom dashbord og statistikk.',
   'project.storage.role':
     'Jeg jobbet på hele stacken og bidro med frontend, backend API-ruter, databaseskjema og integrasjon gjennom en strukturert arkitektur.',
   'project.storage.challenges':
@@ -371,59 +403,91 @@ export const no: Messages = {
 
   'project.servicebus.title': 'Azure Service Bus Manager',
 
-'project.servicebus.lead':
-  'Et webbasert administrasjonsverktøy for å håndtere Azure Service Bus-ressurser som queues, topics og meldinger. Systemet tilbyr søk, filtrering, håndtering av dead-letter meldinger, meldingsinspeksjon og operasjonelle metrikk.',
-'project.servicebus.problem':
-  'Administrasjon av Azure Service Bus via Azure-portalen kan være tregt og lite effektivt når man feilsøker meldinger, inspiserer payload eller håndterer dead-letter køer. Utviklere trenger ofte raskere måter å inspisere meldinger, sende dem på nytt og overvåke meldingsflyt.',
-'project.servicebus.solution':
-  'Jeg utviklet et administrasjonsgrensesnitt som kobler seg til Azure Service Bus og lar brukere navigere i queues og topics, inspisere meldinger, sende dead-letter meldinger på nytt og søke i meldingspayload. Applikasjonen gir også metrikk og analyse av meldingsflyt.',
-'project.servicebus.role':
-  'Jeg designet og implementerte hele systemet inkludert frontend-grensesnitt, backend-tjenester og integrasjon med Azure Service Bus. Jeg implementerte også Redis caching for dead-letter meldinger og utviklet dashbord for metrikkvisualisering.',
-'project.servicebus.challenges':
-  'Håndtering av meldingspayload og dead-letter meldinger krevde nøye behandling av meldingsmetadata og tilstandsendringer. En annen utfordring var å bygge fleksible filtrerings- og søkefunksjoner på tvers av payload samtidig som ytelsen ble opprettholdt.',
+  'project.servicebus.lead':
+    'Et webbasert administrasjonsverktøy for å håndtere Azure Service Bus-ressurser som queues, topics og meldinger. Systemet tilbyr søk, filtrering, håndtering av dead-letter meldinger, meldingsinspeksjon og metrikk.',
+  'project.servicebus.problem':
+    'Administrasjon av Azure Service Bus via Azure-portalen kan være tregt og lite effektivt når man feilsøker meldinger, inspiserer payload eller håndterer dead-letter køer. Utviklere trenger ofte raskere måter å inspisere meldinger, sende dem på nytt og overvåke meldingsflyt.',
+  'project.servicebus.solution':
+    'Jeg og mitt team utviklet et administrasjonsgrensesnitt som kobler seg til Azure Service Bus og lar brukere navigere i queues og topics, inspisere meldinger, sende dead-letter meldinger på nytt og søke i meldingspayload. Applikasjonen gir også metrikk og analyse av meldingsflyt.',
+  'project.servicebus.role':
+    'Vi designet og implementerte hele systemet inkludert frontend-grensesnitt, backend-tjenester og integrasjon med Azure Service Bus. Vi implementerte også Redis caching for dead-letter meldinger og utviklet dashbord for metrikkvisualisering.',
+  'project.servicebus.challenges':
+    'Håndtering av meldingspayload og dead-letter meldinger krevde nøye behandling av meldingsmetadata og tilstandsendringer. En annen utfordring var å bygge fleksible filtrerings- og søkefunksjoner på tvers av payload samtidig som ytelsen ble opprettholdt.',
 
-'project.servicebus.arch.1':
-  'Frontend bygget med React, TypeScript, Vite og Tailwind',
-'project.servicebus.arch.2':
-  'Backend-tjenester som kommuniserer med Azure Service Bus SDK',
-'project.servicebus.arch.3':
-  'Redis brukt til caching av dead-letter meldinger og metadata',
-'project.servicebus.arch.4':
-  'Metrikkdashbord som visualiserer meldingsflyt og feil',
+  'project.servicebus.arch.1':
+    'Frontend bygget med React, TypeScript, Vite og Tailwind',
+  'project.servicebus.arch.2':
+    'Backend-tjenester utviklet i ASP.NET Core (C#) med integrasjon mot Azure Service Bus SDK.',
+  'project.servicebus.arch.3':
+    'Redis brukt til caching av dead-letter meldinger og tilkoblingsmetadata.',
+  'project.servicebus.arch.4':
+    'Metrikkdashbord som visualiserer meldingsflyt',
 
-'project.servicebus.features.1':
-  'Navigere og administrere Azure Service Bus queues og topics',
-'project.servicebus.features.2':
-  'Se aktive meldinger med inspeksjon av payload',
-'project.servicebus.features.3':
-  'Håndtering av dead-letter meldinger og gjenoppretting',
-'project.servicebus.features.4':
-  'Søke etter meldinger via payload, ID eller sekvensnummer',
-'project.servicebus.features.5':
-  'Sende meldinger på nytt direkte fra grensesnittet',
-'project.servicebus.features.6':
-  'Metrikkdashbord som viser meldingsflyt og feil',
+  'project.servicebus.features.1':
+    'Sidebar for håndtering av tilkoblinger hvor brukere kan legge inn en eller flere Azure Service Bus connection strings og raskt bytte mellom dem.',
+  'project.servicebus.features.2':
+    'Navigere og administrere Azure Service Bus queues og topics i valgt namespace.',
+  'project.servicebus.features.3':
+    'Se og inspisere meldinger med detaljert metadata som message ID, sekvensnummer og payload.',
+  'project.servicebus.features.4':
+    'Håndtering av dead-letter meldinger for å identifisere feilede meldinger og feilsøke problemer.',
+  'project.servicebus.features.5':
+    'Søke og filtrere meldinger etter payload, ID eller sekvensnummer.',
+  'project.servicebus.features.6':
+    'Sende meldinger på nytt direkte fra grensesnittet for rask retry av feilet prosessering.',
+  'project.servicebus.features.7':
+    'Metrikkdashbord som visualiserer meldingsflyt, feil og systemaktivitet.',
 
-'project.servicebus.img.topics_list':
-  'Oversikt over topics og subscriptions i Azure Service Bus.',
-'project.servicebus.img.queues_list':
-  'Oversikt over queues i Service Bus namespace.',
-'project.servicebus.img.topic_message_list':
-  'Topic-meldinger vist i applikasjonen.',
-'project.servicebus.img.deadletter_list':
-  'Dead-letter meldinger lagret for feilsøking og gjenoppretting.',
-'project.servicebus.img.deadletter_details':
-  'Detaljvisning av en dead-letter melding med feilinformasjo.',
-'project.servicebus.img.message_details':
-  'Detaljvisning av meldingspayload og metadata.',
-'project.servicebus.img.resend_message_dialog':
-  'Grensesnitt for å sende meldinger på nytt med egendefinerte egenskaper.',
-'project.servicebus.img.redis_connections':
-  'Redis-lagring av Service Bus tilkoblinger.',
-'project.servicebus.img.redis_deadletter_storage':
-  'Dead-letter meldinger cachet i Redis for raskere tilgang.',
-'project.servicebus.img.metrics_dashboard':
-  'Metrikkdashbord som viser innkommende meldinger, feil og trafikk.',
+  'project.servicebus.img.topics_list':
+    'Oversikt over topics og subscriptions i Azure Service Bus.',
+  'project.servicebus.img.queues_list':
+    'Oversikt over queues i Service Bus namespace.',
+  'project.servicebus.img.topic_message_list':
+    'Topic-meldinger vist i applikasjonen.',
+  'project.servicebus.img.deadletter_list':
+    'Dead-letter meldinger lagret for feilsøking og gjenoppretting.',
+  'project.servicebus.img.deadletter_details':
+    'Detaljvisning av en dead-letter melding med feilinformasjo.',
+  'project.servicebus.img.message_details':
+    'Detaljvisning av meldingspayload og metadata.',
+  'project.servicebus.img.resend_message_dialog':
+    'Grensesnitt for å sende meldinger på nytt med egendefinerte egenskaper.',
+  'project.servicebus.img.redis_connections':
+    'Redis-lagring av Service Bus tilkoblinger.',
+  'project.servicebus.img.redis_deadletter_storage':
+    'Dead-letter meldinger cachet i Redis for raskere tilgang.',
+  'project.servicebus.img.metrics_dashboard':
+    'Metrikkdashbord som viser innkommende meldinger, feil og trafikk.',
+  'project.servicebus.img.topic_messages':
+    'Liste over meldinger i en topic-subscription med metadata og forhåndsvisning av payload.',
+  'project.servicebus.img.resend_modal':
+    'Modalvindu for å sende en melding på nytt med endrede egenskaper eller payload.',
+  'project.servicebus.img.message_details_queue':
+    'Detaljvisning av en queue-melding inkludert payload og metadata.',
+  'project.servicebus.img.message_details_deadletter':
+    'Detaljvisning av en dead-letter melding med feilinformasjo.',
+  'project.servicebus.img.redis_deadletter_cache':
+    'Dead-letter payload lagret i Redis for raskere tilgang og analyse.',
+  'project.servicebus.img.main_dashboard':
+    'Hoveddashboard som viser Azure Service Bus topics, queues og systemoversikt.',
+  'project.servicebus.img.queue_filter':
+    'Filtrering av queues etter navn og status for raskt å finne bestemte meldingskøer.',
+  'project.servicebus.img.azure_namespace_overview':
+    'Azure-portalen som viser Service Bus namespace med topics og queues.',
+  'project.servicebus.img.azure_topic_messages':
+    'Meldinger i en topic-subscription vist i Azure-portalen.',
+  'project.servicebus.img.azure_queue_messages':
+    'Queue-meldinger vist direkte i Azure Service Bus.',
+  'project.servicebus.img.message_list':
+    'Applikasjonsgrensesnitt som viser meldinger med metadata som ID og sekvensnummer.',
+  'project.servicebus.img.send_message_dialog':
+    'Dialog for å sende nye meldinger til en queue eller topic med egendefinert payload.',
+  'project.servicebus.img.dashboard_darkmode':
+    'Alternativ mørk modus av Service Bus dashboard-grensesnittet.',
+
+  "chef.dish.1": "Lakseservering til bankett",
+  "chef.dish.2": "Burger med pommes frites",
+  "chef.dish.3": "Bankett-forrett anrettet",
 
 
   'footer.rights': 'Alle rettigheter forbeholdt.',

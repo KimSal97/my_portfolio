@@ -1,24 +1,28 @@
+import salmonPlating from "../assets/foods/Bankett_Thon.jpg"
+import burger from "../assets/foods/Burger_Thon.jpg"
+import banketSalad from "../assets/foods/Banket2t_Thon.jpg"
+
 export type ChefItem = {
   id: string
-  title?: string
+  titleKey?: string
   description: string
   imageUrl: string
 }
 
 export const chefItems: ChefItem[] = [
   {
-    id: 'dish-1',
-    description: 'dish1',
-    imageUrl: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop',
+    id: "dish-1",
+    description: "chef.dish.1",
+    imageUrl: salmonPlating,
   },
   {
-    id: 'dish-2',
-    description: 'dish2',
-    imageUrl: 'https://images.unsplash.com/photo-1516683037151-9d0d845c76f2?q=80&w=1200&auto=format&fit=crop',
+    id: "dish-2",
+    description: "chef.dish.2",
+    imageUrl: burger,
   },
   {
-    id: 'dessert-1',
-    description: 'dish3',
-    imageUrl: 'https://images.unsplash.com/photo-1514516870926-2059890f06cc?q=80&w=1200&auto=format&fit=crop',
+    id: "dish-3",
+    description: "chef.dish.3",
+    imageUrl: banketSalad,
   },
 ]
