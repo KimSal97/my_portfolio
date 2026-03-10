@@ -34,6 +34,30 @@ export function ProjectsTabs({ onSelectProject }: ProjectsTabsProps) {
   const { t } = useI18n()
   const [tab, setTab] = useState<'chef' | 'vfx' | 'cs'>('cs')
 
+  const csSkills = [
+    "Python",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "ASP.NET Core",
+    "Redis",
+    "Azure",
+    "SQL",
+    "Docker",
+  ]
+
+  const vfxSkills = [
+    "Maya",
+    "Nuke",
+    "PFTrack",
+    "Davinci Resolve",
+    "Compositing",
+    "Tracking",
+    "Lighting",
+    "Rendering",
+  ]
+
   return (
     <section id="projects" className="relative bg-gray-950 py-20 text-white">
       <ParticlesBackground type="bubbles" />
@@ -68,14 +92,47 @@ export function ProjectsTabs({ onSelectProject }: ProjectsTabsProps) {
 
         {tab === 'vfx' && (
           <div>
-            <p className="mb-6 text-white/70">{t('projects.vfx.subtitle')}</p>
-            <VimeoEmbed videoUrl="https://vimeo.com/709398946" />
+            <p className="text-white/70">{t('projects.vfx.subtitle')}</p>
+
+            <p className="mt-3 max-w-3xl text-white/70">
+              {t("projects.vfx.context")}
+            </p>
+
+            <div className="mt-4 mb-8 flex flex-wrap gap-2">
+              {vfxSkills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full bg-white/10 px-3 py-1 text-sm text-white/80"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            <div className="rounded-xl border border-white/10 overflow-hidden shadow-xl">
+              <VimeoEmbed videoUrl="https://vimeo.com/709398946" />
+            </div>
+
+            <p className="mt-3 text-sm text-white/50">
+              {t("projects.vfx.note")}
+            </p>
           </div>
         )}
 
         {tab === 'cs' && (
           <div>
-            <p className="mb-6 text-white/70">{t('projects.cs.subtitle')}</p>
+            <p className="text-white/70">{t('projects.cs.subtitle')}</p>
+
+            <div className="mt-4 mb-8 flex flex-wrap gap-2">
+              {csSkills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full bg-white/10 px-3 py-1 text-sm text-white/80"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {projects.map((p) => (

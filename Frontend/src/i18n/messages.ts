@@ -240,6 +240,12 @@ export const en: Messages = {
   'project.servicebus.img.redis_deadletter_cache':
     'Dead-letter message payload cached in Redis to improve retrieval performance.',
 
+  'projects.vfx.context':
+    'My VFX studies took place during the COVID-19 pandemic, which significantly affected the learning environment as school facilities were frequently closed and access to equipment was limited. During this period I was also registered under my previous name, Kushtrim, prior to a later legal name change.',
+
+  'projects.vfx.note':
+    'Note: This reel was produced in 2022 and therefore appears under my previous name.',
+
   "chef.dish.1": "Salmon service for banquet",
   "chef.dish.2": "Burger with fries",
   "chef.dish.3": "Banquet starter plating",
@@ -484,6 +490,12 @@ export const no: Messages = {
     'Dialog for å sende nye meldinger til en queue eller topic med egendefinert payload.',
   'project.servicebus.img.dashboard_darkmode':
     'Alternativ mørk modus av Service Bus dashboard-grensesnittet.',
+
+  'projects.vfx.context':
+    'VFX-studiene mine foregikk under COVID-19-pandemien, noe som påvirket læringsmiljøet betydelig. Skolens lokaler var ofte stengt og tilgangen til utstyr var begrenset. I denne perioden var jeg også registrert under mitt tidligere navn, Kushtrim, før jeg senere gjennomførte et navnebytte.',
+
+  'projects.vfx.note':
+    'Merk: Denne showreelen ble laget i 2022 og vises derfor under mitt tidligere navn.',
 
   "chef.dish.1": "Lakseservering til bankett",
   "chef.dish.2": "Burger med pommes frites",
